@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Button} from './Button';
 import {Input} from './Input';
+import styles from './HW4.module.css';
 
 export const HW4 = () => {
   // 1️⃣ Раскомментируйте JSX (HW4.tsx) и вы увидите,
@@ -41,7 +42,7 @@ export const HW4 = () => {
         {texts.map((el, index) => {
           return (
             // <li key={index} id={`hw04-task-${index}`} className={ЕСЛИ ЧЕТН ? S.chetNechet : ''}>
-            <li key={index} id={`hw04-task-${index}`} className={index % 2 ? '.chetNechet' : ''}>
+            <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? styles.chetNechet : ''}>
               {el}
             </li>
           );
